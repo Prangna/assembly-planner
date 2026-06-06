@@ -108,6 +108,7 @@ footer{{text-align:center;padding:1.5rem;border-top:1px solid var(--border);colo
   <div class="logo"><span class="logo-dot"></span> Assembly Planner</div>
   <nav>
     {'<a href="/dashboard">Dashboard</a><a href="/new-plan">New Plan</a><a href="/logout">Logout</a>' if current_user.is_authenticated else '<a href="/login">Login</a><a href="/register">Register</a>'}
+    <a href="https://forms.gle/MeaBkvtQ1r6FDQPbA" target="_blank" style="background:linear-gradient(135deg,#7c3aed,#a78bfa);color:#fff;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:500;text-decoration:none">💬 Give Feedback</a>
   </nav>
 </header>
 {content}
@@ -239,6 +240,7 @@ def dashboard():
     </div>
     <a href="/new-plan" class="btn btn-primary">+ New Assembly Plan</a>
   </div>
+  <div style="background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(167,139,250,0.1));border:1px solid rgba(167,139,250,0.3);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px"><div><div style="font-size:14px;font-weight:500">🌍 Help improve this app!</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Share your feedback — takes just 2 minutes. Your suggestions shape future features.</div></div><a href="https://forms.gle/MeaBkvtQ1r6FDQPbA" target="_blank" class="btn btn-primary btn-sm">💬 Give Feedback</a></div>
   <div class="card">
     <h2>Your Assembly Plans ({len(plans)})</h2>
     {plans_html}
